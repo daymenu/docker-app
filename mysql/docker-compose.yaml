@@ -1,0 +1,13 @@
+version: '3'
+services:
+  mysql:
+    build: .
+    container_name: mysql
+    environment:
+      - "MYSQL_ROOT_PASSWORD=123456"
+      - "TZ=Asia/Shanghai"
+    volumes:
+      - ./conf/my.cnf:/etc/my.cnf
+    ports:
+      # 宿主机端口:容器端口
+      - 3306:3306
