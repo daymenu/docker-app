@@ -1,0 +1,11 @@
+version: '3'
+services:
+  centos1:
+    restart: always
+    build: .
+    container_name: centos8
+    stdin_open: true
+    tty: true
+    privileged: true
+    ports:
+      - "8022:22"
