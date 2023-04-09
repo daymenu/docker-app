@@ -8,6 +8,7 @@ services:
       - "TZ=Asia/Shanghai"
     volumes:
       - ./conf/my.cnf:/etc/my.cnf
+      - ./sql:/docker-entrypoint-initdb.d
     ports:
       # 宿主机端口:容器端口
       - 3306:3306
